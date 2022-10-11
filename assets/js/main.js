@@ -13,48 +13,57 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 /************
  ****MAIL*****/
-
-// chiedi all'utente la sua mail
-// prompt
-const mailEl = prompt('Inserire email')
-
 // creo un array
 // array
 const listMail = ['pippo@gmail.com',
-'pluto@gmail.com',
-'pinco@gmail.com',
-'pallo@gmail.com'];
+    'pluto@gmail.com',
+    'pinco@gmail.com',
+    'pallo@gmail.com'];
+
+let varEl
+let resultEl
+let boxMail = document.querySelector('.box_mail')
+// chiedi all'utente la sua mail
+// prompt
+const goButton = document.getElementById('go');
+goButton.addEventListener('click',
+    function () {
+        const mailEl = document.querySelector('input').value;
+        console.log(mailEl);
+        for (let i = 0; i < listMail.length; i++) {
+            if (mailEl == listMail[i]) {
+                varEl = 1;
+            };
+        }
+        if (varEl == 1) {
+            console.log('Mail presente');
+            //inserisco messaggio nell'elemento
+            resultEl = 'Mail presente';
+        } else {
+            console.log('Mail non presente');
+            //inserisco messaggio nell'elemento
+            resultEl = 'Mail NON presente';
+        }
+        boxMail.innerHTML = `<h1>${resultEl}</h1>`;
+
+    }
+)
+
 
 //controllo che sia nella lista di chi può accedere
 //confronto la mail con la lista
 //ciclo for
 //if statement
-let varEl
-let resultEl
 
-for (let i = 0; i < listMail.length; i++) {
-    if (mailEl == listMail[i]) {
-        varEl = 1;
-    };
-}
+
 
 /*stampo il risultato nel DOM*/
 
 //seleziono elemento del DOM
-let boxMail = document.querySelector('.box_mail')
 
-if (varEl == 1) {
-    console.log('Mail presente');
-    //inserisco messaggio nell'elemento
-    resultEl = 'Mail presente';
-} else {
-    console.log('Mail non presente');
-    //inserisco messaggio nell'elemento
-    resultEl = 'Mail NON presente';
-}
+
 
 //inserisco l'elemento con il messaggio nel dom
-boxMail.insertAdjacentHTML('afterend', `<h1>${resultEl}</h1>`)
 
 /*
 Gioco dei dadi
