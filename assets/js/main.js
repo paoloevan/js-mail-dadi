@@ -49,30 +49,12 @@ goButton.addEventListener('click',
     }
 )
 
-
-//controllo che sia nella lista di chi può accedere
-//confronto la mail con la lista
-//ciclo for
-//if statement
-
-
-
-/*stampo il risultato nel DOM*/
-
-//seleziono elemento del DOM
-
-
-
-//inserisco l'elemento con il messaggio nel dom
-
 /*
 Gioco dei dadi
 Generare un numero random da 1 a 6,
 sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
-
-
 
 const playButton = document.getElementById('play');
 playButton.addEventListener('click',
