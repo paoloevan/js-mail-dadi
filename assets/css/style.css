@@ -9,4 +9,29 @@
 }
 .row {
     display: flex;
+    justify-content: space-between;
+}
+.winner {
+    text-align: center;
+}
+.patta {
+    color: red;
+}
+#play {
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: purple;
+    color: white;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+}
+.you_win {
+    color: red;
+}
+.cpu_win {
+    color: gray;
 }

@@ -72,29 +72,36 @@ sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
-//genero i numeri
-const cpuNumber = Math.floor(Math.random() * 6) + 1;
-const userNumber = Math.floor(Math.random() * 6) + 1;
-console.log(cpuNumber);
-console.log(userNumber);
 
-//inserisco i numeri nel DOM
-const cpuNumberEl = document.querySelector('.cpu_number');
-const userNumberEl = document.querySelector('.user_number');
 
-cpuNumberEl.innerHTML = `<h4>${cpuNumber}</h4>`;
-userNumberEl.innerHTML = `<h4>${userNumber}</h4>`;
+const playButton = document.getElementById('play');
+playButton.addEventListener('click',
+    function () {
+        //genero i numeri
+        const cpuNumber = Math.floor(Math.random() * 6) + 1;
+        const userNumber = Math.floor(Math.random() * 6) + 1;
+        console.log(cpuNumber);
+        console.log(userNumber);
 
-//confronto i risultati
-const winnerEl = document.querySelector('.winner');
-if (cpuNumber > userNumber) {
-    console.log('pc ha vinto');
-    winnerEl.insertAdjacentHTML('afterend', `<h1>Computer ha vinto :(</h1>`)
-    //cpuNumberEl.insertAdjacentHTML('beforeend', `<h4>Computer ha vinto :(</h4>`);
-} else if (userNumber > cpuNumber) {
-    console.log('user ha vinto');
-    winnerEl.insertAdjacentHTML('afterend', `<h1>Hai vinto! :D</h1>`)
-} else {
-    console.log('patta');
-    winnerEl.insertAdjacentHTML('afterend', `<h1>Patta -.-</h1>`)
-}
+        //inserisco i numeri nel DOM
+        const cpuNumberEl = document.querySelector('.cpu_number');
+        const userNumberEl = document.querySelector('.user_number');
+
+        cpuNumberEl.innerHTML = `<h4>${cpuNumber}</h4>`;
+        userNumberEl.innerHTML = `<h4>${userNumber}</h4>`;
+
+        //confronto i risultati
+        const winnerEl = document.querySelector('.winner');
+        if (cpuNumber > userNumber) {
+            console.log('pc ha vinto');
+            winnerEl.innerHTML = `<h1 class=\"cpu_win\">Computer ha vinto :(</h1>`
+            //cpuNumberEl.insertAdjacentHTML('beforeend', `<h4>Computer ha vinto :(</h4>`);
+        } else if (userNumber > cpuNumber) {
+            console.log('user ha vinto');
+            winnerEl.innerHTML = `<h1 class=\"you_win">Hai vinto! :D</h1>`
+        } else {
+            console.log('patta');
+            winnerEl.innerHTML = `<h1 class=\"patta">Patta -.-</h1>`
+        }
+    }
+)
