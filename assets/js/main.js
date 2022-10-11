@@ -30,6 +30,7 @@ goButton.addEventListener('click',
     function () {
         const mailEl = document.querySelector('input').value;
         console.log(mailEl);
+        varEl = 0;
         for (let i = 0; i < listMail.length; i++) {
             if (mailEl == listMail[i]) {
                 varEl = 1;
