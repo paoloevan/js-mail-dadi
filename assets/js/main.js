@@ -58,7 +58,22 @@ boxMail.insertAdjacentHTML('afterend', `<h1>${resultEl}</h1>`)
 
 /*
 Gioco dei dadi
-Generare un numero random da 1 a 6
+Generare un numero random da 1 a 6,
 sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
+
+//genero i numeri
+const cpuNumber = Math.floor(Math.random() * 6) + 1;
+const userNumber = Math.floor(Math.random() * 6) + 1;
+console.log(cpuNumber);
+console.log(userNumber);
+
+//confronto i risultati
+if (cpuNumber > userNumber) {
+    console.log('pc ha vinto');
+} else if (userNumber > cpuNumber) {
+    console.log('user ha vinto');
+} else {
+    console.log('patta');
+}
