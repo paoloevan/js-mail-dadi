@@ -24,7 +24,7 @@ let varEl
 let resultEl
 let boxMail = document.querySelector('.box_mail')
 // chiedi all'utente la sua mail
-// prompt
+
 const goButton = document.getElementById('go');
 goButton.addEventListener('click',
     function () {
@@ -78,11 +78,23 @@ const userNumber = Math.floor(Math.random() * 6) + 1;
 console.log(cpuNumber);
 console.log(userNumber);
 
+//inserisco i numeri nel DOM
+const cpuNumberEl = document.querySelector('.cpu_number');
+const userNumberEl = document.querySelector('.user_number');
+
+cpuNumberEl.innerHTML = `<h4>${cpuNumber}</h4>`;
+userNumberEl.innerHTML = `<h4>${userNumber}</h4>`;
+
 //confronto i risultati
+const winnerEl = document.querySelector('.winner');
 if (cpuNumber > userNumber) {
     console.log('pc ha vinto');
+    winnerEl.insertAdjacentHTML('afterend', `<h1>Computer ha vinto :(</h1>`)
+    //cpuNumberEl.insertAdjacentHTML('beforeend', `<h4>Computer ha vinto :(</h4>`);
 } else if (userNumber > cpuNumber) {
     console.log('user ha vinto');
+    winnerEl.insertAdjacentHTML('afterend', `<h1>Hai vinto! :D</h1>`)
 } else {
     console.log('patta');
+    winnerEl.insertAdjacentHTML('afterend', `<h1>Patta -.-</h1>`)
 }
