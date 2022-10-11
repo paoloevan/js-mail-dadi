@@ -17,20 +17,20 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 // chiedi all'utente la sua mail
 // prompt
 const mailEl = prompt('Inserire email')
-let varEl
-let resultEl
 
 // creo un array
 // array
 const listMail = ['pippo@gmail.com',
-    'pluto@gmail.com',
-    'pinco@gmail.com',
-    'pallo@gmail.com'];
+'pluto@gmail.com',
+'pinco@gmail.com',
+'pallo@gmail.com'];
 
 //controllo che sia nella lista di chi può accedere
 //confronto la mail con la lista
 //ciclo for
 //if statement
+let varEl
+let resultEl
 
 for (let i = 0; i < listMail.length; i++) {
     if (mailEl == listMail[i]) {
@@ -56,4 +56,9 @@ if (varEl == 1) {
 //inserisco l'elemento con il messaggio nel dom
 boxMail.insertAdjacentHTML('afterend', `<h1>${resultEl}</h1>`)
 
-
+/*
+Gioco dei dadi
+Generare un numero random da 1 a 6
+sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+*/
