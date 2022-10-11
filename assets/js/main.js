@@ -18,7 +18,7 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 // prompt
 const mailEl = prompt('Inserire email')
 let varEl
-
+let resultEl
 
 // creo un array
 // array
@@ -38,11 +38,22 @@ for (let i = 0; i < listMail.length; i++) {
     };
 }
 
+/*stampo il risultato nel DOM*/
+
+//seleziono elemento del DOM
+let boxMail = document.querySelector('.box_mail')
+
 if (varEl == 1) {
     console.log('Mail presente');
+    //inserisco messaggio nell'elemento
+    resultEl = 'Mail presente';
 } else {
     console.log('Mail non presente');
+    //inserisco messaggio nell'elemento
+    resultEl = 'Mail NON presente';
 }
 
-//scorro all'interno dell'array
+//inserisco l'elemento con il messaggio nel dom
+boxMail.insertAdjacentHTML('afterend', `<h1>${resultEl}</h1>`)
+
 
