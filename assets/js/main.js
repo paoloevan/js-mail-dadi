@@ -22,7 +22,6 @@ const listMail = ['pippo@gmail.com',
 let varEl;
 let resultEl;
 let boxMail = document.querySelector('.box_mail');
-// chiedi all'utente la sua mail
 
 const goButton = document.getElementById('go');
 goButton.addEventListener('click',
@@ -77,7 +76,6 @@ playButton.addEventListener('click',
         if (cpuNumber > userNumber) {
             console.log('pc ha vinto');
             winnerEl.innerHTML = `<h1 class=\"cpu_win\">Computer ha vinto :(</h1>`;
-            //cpuNumberEl.insertAdjacentHTML('beforeend', `<h4>Computer ha vinto :(</h4>`);
         } else if (userNumber > cpuNumber) {
             console.log('user ha vinto');
             winnerEl.innerHTML = `<h1 class=\"you_win">Hai vinto! :D</h1>`;
