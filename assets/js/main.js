@@ -39,9 +39,9 @@ for (let i = 0; i < listMail.length; i++) {
 }
 
 if (varEl == 1) {
-    console.log('presente');
+    console.log('Mail presente');
 } else {
-    console.log('non presente');
+    console.log('Mail non presente');
 }
 
 //scorro all'interno dell'array
