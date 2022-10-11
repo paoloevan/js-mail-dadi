@@ -13,16 +13,15 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 /************
  ****MAIL*****/
-// creo un array
-// array
+
 const listMail = ['pippo@gmail.com',
     'pluto@gmail.com',
     'pinco@gmail.com',
     'pallo@gmail.com'];
 
-let varEl
-let resultEl
-let boxMail = document.querySelector('.box_mail')
+let varEl;
+let resultEl;
+let boxMail = document.querySelector('.box_mail');
 // chiedi all'utente la sua mail
 
 const goButton = document.getElementById('go');
@@ -95,14 +94,14 @@ playButton.addEventListener('click',
         const winnerEl = document.querySelector('.winner');
         if (cpuNumber > userNumber) {
             console.log('pc ha vinto');
-            winnerEl.innerHTML = `<h1 class=\"cpu_win\">Computer ha vinto :(</h1>`
+            winnerEl.innerHTML = `<h1 class=\"cpu_win\">Computer ha vinto :(</h1>`;
             //cpuNumberEl.insertAdjacentHTML('beforeend', `<h4>Computer ha vinto :(</h4>`);
         } else if (userNumber > cpuNumber) {
             console.log('user ha vinto');
-            winnerEl.innerHTML = `<h1 class=\"you_win">Hai vinto! :D</h1>`
+            winnerEl.innerHTML = `<h1 class=\"you_win">Hai vinto! :D</h1>`;
         } else {
             console.log('patta');
-            winnerEl.innerHTML = `<h1 class=\"patta">Patta -.-</h1>`
+            winnerEl.innerHTML = `<h1 class=\"patta">Patta -.-</h1>`;
         }
     }
 )
