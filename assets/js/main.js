@@ -28,12 +28,14 @@ goButton.addEventListener('click',
     function () {
         const mailEl = document.querySelector('input').value;
         console.log(mailEl);
+
         varEl = 0;
         for (let i = 0; i < listMail.length; i++) {
             if (mailEl == listMail[i]) {
                 varEl = 1;
             };
         }
+
         if (varEl == 1) {
             console.log('Mail presente');
             //inserisco messaggio nell'elemento
@@ -56,6 +58,8 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
 const playButton = document.getElementById('play');
+const winnerEl = document.querySelector('.winner');
+
 playButton.addEventListener('click',
     function () {
         //genero i numeri
@@ -72,7 +76,6 @@ playButton.addEventListener('click',
         userNumberEl.innerHTML = `<h4>${userNumber}</h4>`;
 
         //confronto i risultati
-        const winnerEl = document.querySelector('.winner');
         if (cpuNumber > userNumber) {
             console.log('pc ha vinto');
             winnerEl.innerHTML = `<h1 class=\"cpu_win\">Computer ha vinto :(</h1>`;
